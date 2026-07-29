@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carina Font — Portafolio de Arte</title>
+  <meta name="description" content="Carina Font. Acuarelas, dibujo digital, pintura y piezas mixtas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#inicio" class="mark">CF</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-grid">
+        <div class="hero-identity">
+          <p class="eyebrow">Portafolio de arte</p>
+          <h1 class="hero-name">Carina<br>F<span class="o-drop">o</span>nt</h1>
+          <p class="hero-tagline">Acuarela, dibujo digital, pintura y piezas que no entran en ninguna categoría.</p>
+
+          <div class="pigment-pills" id="pigmentPills">
+            <button class="pigment-pill" data-categoria="acuarelas" style="--pigment: var(--pigment-cerulean)">Acuarelas</button>
+            <button class="pigment-pill" data-categoria="dibujo-digital" style="--pigment: var(--pigment-magenta)">Dibujo digital</button>
+            <button class="pigment-pill" data-categoria="pintura" style="--pigment: var(--pigment-ochre)">Pintura</button>
+            <button class="pigment-pill" data-categoria="varios" style="--pigment: var(--pigment-teal)">Varios</button>
+          </div>
+          <button class="ver-todas" id="verTodas">Ver todas las obras →</button>
+        </div>
+
+        <a href="#galeria" class="hero-figure" aria-label="Ir a la galería">
+          <img src="images/hero-artwork.svg" alt="Estudio de color: obra representativa de la mezcla de técnicas de Carina Font">
+        </a>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery-section">
+      <div class="gallery-heading">
+        <h2>Galería</h2>
+        <p class="gallery-status" id="galleryStatus">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusLabel">Todas las obras</span>
+        </p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <p class="gallery-loading">Cargando obras…</p>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="about-section">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Carina Font. Trabajo entre el agua y el pixel: acuarelas que se dejan llevar por el papel
+        mojado, ilustración digital de trazo más preciso, óleo y técnicas mixtas cuando ninguna de las
+        anteriores alcanza. Este espacio reúne una selección de esos trabajos, en crecimiento constante.
+      </p>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <h2>Contacto</h2>
+      <p>¿Te interesa alguna obra o querés encargar una pieza? Escribime.</p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/TU_ID_DE_FORMSPREE"
+        method="POST"
+      >
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+
+      <div class="social-links">
+        <a href="mailto:tuemail@ejemplo.com">Email</a>
+        <a href="https://instagram.com/tuusuario" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5490000000000" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Carina Font. Hecho con HTML, CSS y JS.</p>
+  </footer>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
