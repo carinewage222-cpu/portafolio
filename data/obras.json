@@ -5,6 +5,18 @@
       "categoria": "acuarelas",
       "imagen": "images/obras/bote.jpg",
       "anio": 2020
+    },
+    {
+      "imagen": "images/obras/IMG_20250320_100948_443.webp",
+      "titulo": "aves",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/IMG-20260607-WA0005.jpg",
+      "titulo": "conejo",
+      "categoria": "dibujo-digital",
+      "anio": 2026
     }
   ]
 }
