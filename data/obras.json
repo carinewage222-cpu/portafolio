@@ -11,6 +11,12 @@
       "titulo": "aves",
       "categoria": "acuarelas",
       "anio": 2026
+    },
+    {
+      "imagen": "images/obras/IMG-20260607-WA0005.jpg",
+      "titulo": "conejo",
+      "categoria": "dibujo-digital",
+      "anio": 2026
     }
   ]
 }
