@@ -127,6 +127,28 @@ function initNav() {
   });
 }
 
+function initCopyEmail() {
+  const btn = document.getElementById('copyEmail');
+  if (!btn) return;
+  const email = btn.dataset.email;
+  const textoOriginal = btn.textContent;
+
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (err) {
+      const input = document.createElement('input');
+      input.value = email;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    btn.textContent = 'Copiado ✓';
+    setTimeout(() => { btn.textContent = textoOriginal; }, 1800);
+  });
+}
+
 async function cargarConfig() {
   try {
     const res = await fetch('data/config.json');
@@ -147,4 +169,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPigmentPills();
   initLightbox();
   initNav();
+  initCopyEmail();
 });
