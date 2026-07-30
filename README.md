@@ -27,12 +27,15 @@ Ver la sección [Panel de administración](#panel-de-administración-admin) más
 }
 ```
 
-3. `categoria` debe ser una de estas cuatro (en minúsculas, tal cual):
+3. `categoria` debe ser una de estas cinco (en minúsculas, tal cual):
    - `acuarelas`
    - `dibujo-digital`
    - `pintura`
+   - `proceso`
    - `varios`
-4. Guardá el archivo. La obra aparece automáticamente en la galería y en su filtro correspondiente — no hace falta tocar `index.html`.
+4. Guardá el archivo. La obra nueva aparece primera dentro de su categoría (el sitio siempre muestra lo último agregado arriba) — no hace falta tocar `index.html`.
+
+⚠️ La galería no muestra ninguna obra hasta que el visitante toca una categoría en la portada — es intencional, no un error.
 
 ⚠️ Cuidado con la coma: cada obra dentro de `"obras": [...]` va separada por coma, excepto la última.
 
@@ -43,7 +46,7 @@ Las 4 obras que vienen cargadas (`ejemplo-acuarela.svg`, etc.) son placeholders 
 ## Personalizar textos y contacto
 
 - **Nombre/marca**: cambiá "Carina Font" en `index.html` (etiqueta `<title>` y `.hero-name`). El monograma "CF" del menú está en la clase `.mark`.
-- **Categorías y colores de pigmento**: cada categoría tiene un color asignado (`--pigment-cerulean`, `--pigment-magenta`, `--pigment-ochre`, `--pigment-teal` en `css/style.css`). Si agregás una categoría nueva, sumale también su color ahí y en `CATEGORIA_PIGMENTOS`/`CATEGORIA_LABELS` de `js/gallery.js`, y un botón `.pigment-pill` en el hero de `index.html`.
+- **Categorías y colores de pigmento**: cada categoría tiene un color asignado (`--pigment-cerulean`, `--pigment-magenta`, `--pigment-ochre`, `--pigment-violet`, `--pigment-teal` en `css/style.css`). Si agregás una categoría nueva, sumale también su color ahí y en `CATEGORIA_PIGMENTOS`/`CATEGORIA_LABELS` de `js/gallery.js`, un botón `.pigment-pill` en el hero de `index.html`, y la opción correspondiente en `admin/config.yml`.
 - **Imagen del hero**: `images/hero-artwork.svg` es un placeholder abstracto (mezcla de los 4 colores de pigmento). Reemplazalo por una foto o escaneo de una obra real tuya — cualquier `.jpg`/`.png`/`.webp` funciona, solo actualizá la ruta en `<img>` dentro de `.hero-figure` en `index.html`.
 - **Sección "Sobre mí"**: editá el texto directamente en `index.html`, dentro de `<section id="sobre-mi">`.
 - **Formulario de contacto**: usa [Formspree](https://formspree.io) (gratis hasta 50 envíos/mes).

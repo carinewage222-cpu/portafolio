@@ -10,6 +10,7 @@
   --pigment-magenta: #d4568f;
   --pigment-ochre: #e0a24d;
   --pigment-teal: #4bbf9f;
+  --pigment-violet: #8f6fd9;
 
   --font-display: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
@@ -147,7 +148,7 @@ section h2 {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.98rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -162,23 +163,6 @@ section h2 {
   line-height: 0.98;
   color: var(--paper);
   margin-bottom: 1.5rem;
-}
-
-.o-drop {
-  position: relative;
-  display: inline-block;
-}
-
-.o-drop::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -0.32em;
-  width: 0.16em;
-  height: 0.16em;
-  border-radius: 50%;
-  background: var(--pigment-cerulean);
-  transform: translateX(-50%);
 }
 
 .hero-tagline {
@@ -198,13 +182,13 @@ section h2 {
 .pigment-pill {
   position: relative;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--paper);
   background: var(--ink-2);
   border: 1px solid rgba(242, 237, 226, 0.12);
   border-radius: 999px;
-  padding: 0.6rem 1.3rem;
+  padding: 0.7rem 1.5rem;
   cursor: pointer;
   isolation: isolate;
   transition: border-color var(--transition), transform var(--transition), color var(--transition);
@@ -246,25 +230,14 @@ section h2 {
   opacity: 0;
 }
 
-.ver-todas {
-  display: inline-block;
-  background: none;
-  border: none;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color var(--transition);
-}
-
-.ver-todas:hover {
-  color: var(--paper);
-}
-
 .hero-figure {
   display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
   border-radius: 18px;
   overflow: hidden;
   aspect-ratio: 3 / 4;
@@ -344,12 +317,17 @@ section h2 {
 .gallery-item .img-wrap {
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  padding: 6px;
+  border: 1px solid rgba(242, 237, 226, 0.16);
+  border-radius: 6px;
+  margin: 10px 10px 0;
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2px;
   transition: transform 0.4s ease;
 }
 
@@ -380,17 +358,19 @@ section h2 {
 .about-section {
   background: var(--ink-2);
   border-radius: 18px;
+  padding: 3rem 2.5rem;
 }
 
 .about-section p {
   color: var(--text-muted);
-  max-width: 700px;
+  max-width: 560px;
   margin: 0 auto;
   font-size: 1.05rem;
 }
 
 .about-section h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* ---------- Contact ---------- */

@@ -2,6 +2,7 @@ const CATEGORIA_LABELS = {
   'acuarelas': 'Acuarelas',
   'dibujo-digital': 'Dibujo digital',
   'pintura': 'Pintura',
+  'proceso': 'Proceso',
   'varios': 'Varios',
 };
 
@@ -9,11 +10,12 @@ const CATEGORIA_PIGMENTOS = {
   'acuarelas': '--pigment-cerulean',
   'dibujo-digital': '--pigment-magenta',
   'pintura': '--pigment-ochre',
+  'proceso': '--pigment-violet',
   'varios': '--pigment-teal',
 };
 
 let obras = [];
-let categoriaActiva = 'todas';
+let categoriaActiva = null;
 
 async function cargarObras() {
   const grid = document.getElementById('galleryGrid');
@@ -31,9 +33,15 @@ async function cargarObras() {
 
 function renderGaleria() {
   const grid = document.getElementById('galleryGrid');
-  const filtradas = categoriaActiva === 'todas'
-    ? obras
-    : obras.filter((o) => o.categoria === categoriaActiva);
+
+  if (!categoriaActiva) {
+    grid.innerHTML = '<p class="gallery-empty">Elegí una categoría en la portada para ver las obras.</p>';
+    return;
+  }
+
+  // Las obras agregadas más recientemente (al final del JSON) se muestran primero.
+  const masNuevasPrimero = [...obras].reverse();
+  const filtradas = masNuevasPrimero.filter((o) => o.categoria === categoriaActiva);
 
   if (filtradas.length === 0) {
     grid.innerHTML = '<p class="gallery-empty">Todavía no hay obras en esta categoría.</p>';
@@ -64,9 +72,9 @@ function actualizarEstadoGaleria() {
   const dot = document.getElementById('statusDot');
   const label = document.getElementById('statusLabel');
 
-  if (categoriaActiva === 'todas') {
-    dot.style.background = 'var(--paper)';
-    label.textContent = 'Todas las obras';
+  if (!categoriaActiva) {
+    dot.style.background = 'transparent';
+    label.textContent = 'Elegí una categoría';
   } else {
     dot.style.background = `var(${CATEGORIA_PIGMENTOS[categoriaActiva]})`;
     label.textContent = CATEGORIA_LABELS[categoriaActiva];
@@ -105,7 +113,6 @@ function initPigmentPills() {
   document.querySelectorAll('.pigment-pill').forEach((pill) => {
     pill.addEventListener('click', () => seleccionarCategoria(pill.dataset.categoria));
   });
-  document.getElementById('verTodas').addEventListener('click', () => seleccionarCategoria('todas'));
 }
 
 function initLightbox() {
@@ -149,6 +156,19 @@ function initCopyEmail() {
   });
 }
 
+function initHeroFigure() {
+  const trigger = document.getElementById('heroFigure');
+  if (!trigger) return;
+  trigger.addEventListener('click', () => {
+    const img = document.getElementById('heroImage');
+    abrirLightbox({
+      imagen: img.getAttribute('src'),
+      titulo: 'Carina Font',
+      descripcion: img.alt,
+    });
+  });
+}
+
 async function cargarConfig() {
   try {
     const res = await fetch('data/config.json');
@@ -170,4 +190,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initNav();
   initCopyEmail();
+  initHeroFigure();
 });

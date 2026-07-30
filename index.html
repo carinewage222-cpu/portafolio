@@ -31,21 +31,21 @@
       <div class="hero-grid">
         <div class="hero-identity">
           <p class="eyebrow">Portafolio de arte</p>
-          <h1 class="hero-name">Carina<br>F<span class="o-drop">o</span>nt</h1>
+          <h1 class="hero-name">Carina<br>Font</h1>
           <p class="hero-tagline">Acuarela, dibujo digital, pintura y piezas que no entran en ninguna categoría.</p>
 
           <div class="pigment-pills" id="pigmentPills">
             <button class="pigment-pill" data-categoria="acuarelas" style="--pigment: var(--pigment-cerulean)">Acuarelas</button>
             <button class="pigment-pill" data-categoria="dibujo-digital" style="--pigment: var(--pigment-magenta)">Dibujo digital</button>
             <button class="pigment-pill" data-categoria="pintura" style="--pigment: var(--pigment-ochre)">Pintura</button>
+            <button class="pigment-pill" data-categoria="proceso" style="--pigment: var(--pigment-violet)">Proceso</button>
             <button class="pigment-pill" data-categoria="varios" style="--pigment: var(--pigment-teal)">Varios</button>
           </div>
-          <button class="ver-todas" id="verTodas">Ver todas las obras →</button>
         </div>
 
-        <a href="#galeria" class="hero-figure" aria-label="Ir a la galería">
+        <button type="button" class="hero-figure" id="heroFigure" aria-label="Ver imagen de portada en detalle">
           <img src="images/hero-artwork.svg" alt="Estudio de color: obra representativa de la mezcla de técnicas de Carina Font" id="heroImage">
-        </a>
+        </button>
       </div>
     </section>
 
@@ -54,12 +54,12 @@
         <h2>Galería</h2>
         <p class="gallery-status" id="galleryStatus">
           <span class="status-dot" id="statusDot"></span>
-          <span id="statusLabel">Todas las obras</span>
+          <span id="statusLabel">Elegí una categoría</span>
         </p>
       </div>
 
       <div class="gallery-grid" id="galleryGrid">
-        <p class="gallery-loading">Cargando obras…</p>
+        <p class="gallery-empty">Elegí una categoría en la portada para ver las obras.</p>
       </div>
     </section>
 

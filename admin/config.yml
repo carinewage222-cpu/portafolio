@@ -26,6 +26,7 @@ collections:
                   - { label: "Acuarelas", value: "acuarelas" }
                   - { label: "Dibujo digital", value: "dibujo-digital" }
                   - { label: "Pintura", value: "pintura" }
+                  - { label: "Proceso", value: "proceso" }
                   - { label: "Varios", value: "varios" }
               - { label: "Imagen", name: "imagen", widget: "image" }
               - { label: "Descripción", name: "descripcion", widget: "text", required: false }
