@@ -1,11 +1,6 @@
 {
   "obras": [
     {
-      "imagen": "images/obras/dracofish✓.png",
-      "titulo": "dracofish",
-      "categoria": "dibujo-digital"
-    },
-    {
       "titulo": "barco",
       "categoria": "acuarelas",
       "imagen": "images/obras/bote.jpg",
