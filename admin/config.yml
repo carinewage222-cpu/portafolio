@@ -30,7 +30,8 @@ collections:
                   - { label: "Varios", value: "varios" }
               - { label: "Imagen", name: "imagen", widget: "image" }
               - { label: "Descripción", name: "descripcion", widget: "text", required: false }
-              - { label: "Año", name: "anio", widget: "number", value_type: "int", min: 1900, max: 2100 }
+              - { label: "Año", name: "anio", widget: "number", value_type: "int", min: 1900, max: 2100, required: false }
+              - { label: "Medidas", name: "medidas", widget: "string", required: false, hint: "Ej: 30 x 40 cm" }
 
   - name: "configuracion"
     label: "Configuración del sitio"

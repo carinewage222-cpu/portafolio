@@ -17,6 +17,13 @@ const CATEGORIA_PIGMENTOS = {
 let obras = [];
 let categoriaActiva = null;
 
+function metaObra(obra) {
+  const partes = [CATEGORIA_LABELS[obra.categoria] || obra.categoria];
+  if (obra.anio) partes.push(obra.anio);
+  if (obra.medidas) partes.push(obra.medidas);
+  return partes.join(' · ');
+}
+
 async function cargarObras() {
   const grid = document.getElementById('galleryGrid');
   try {
@@ -55,7 +62,7 @@ function renderGaleria() {
       </div>
       <div class="info">
         <h3>${obra.titulo}</h3>
-        <span>${CATEGORIA_LABELS[obra.categoria] || obra.categoria} · ${obra.anio || ''}</span>
+        <span>${metaObra(obra)}</span>
       </div>
     </article>
   `).join('');

@@ -23,7 +23,8 @@ Ver la sección [Panel de administración](#panel-de-administración-admin) más
   "categoria": "acuarelas",
   "imagen": "images/obras/paisaje-otonal.jpg",
   "descripcion": "Una frase corta sobre la obra.",
-  "anio": 2026
+  "anio": 2026,
+  "medidas": "30 x 40 cm"
 }
 ```
 
@@ -33,7 +34,8 @@ Ver la sección [Panel de administración](#panel-de-administración-admin) más
    - `pintura`
    - `proceso`
    - `varios`
-4. Guardá el archivo. La obra nueva aparece primera dentro de su categoría (el sitio siempre muestra lo último agregado arriba) — no hace falta tocar `index.html`.
+4. `anio` y `medidas` son opcionales — si no los ponés, simplemente no aparecen en la ficha de la obra.
+5. Guardá el archivo. La obra nueva aparece primera dentro de su categoría (el sitio siempre muestra lo último agregado arriba) — no hace falta tocar `index.html`.
 
 ⚠️ La galería no muestra ninguna obra hasta que el visitante toca una categoría en la portada — es intencional, no un error.
 
