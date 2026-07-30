@@ -27,6 +27,12 @@
       "imagen": "images/obras/ejemplo-varios.svg",
       "descripcion": "Pieza mixta explorando materiales no convencionales.",
       "anio": 2025
+    },
+    {
+      "titulo": "barco",
+      "categoria": "acuarelas",
+      "imagen": "images/obras/bote.jpg",
+      "anio": 2020
     }
   ]
 }
