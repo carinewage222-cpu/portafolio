@@ -1,34 +1,6 @@
 {
   "obras": [
     {
-      "titulo": "Amanecer en acuarela",
-      "categoria": "acuarelas",
-      "imagen": "images/obras/bote.jpg",
-      "descripcion": "Estudio de luz y color en técnica húmeda sobre húmedo.",
-      "anio": 2026
-    },
-    {
-      "titulo": "Retrato digital I",
-      "categoria": "dibujo-digital",
-      "imagen": "images/obras/ejemplo-digital.svg",
-      "descripcion": "Ilustración digital realizada en tableta gráfica.",
-      "anio": 2026
-    },
-    {
-      "titulo": "Paisaje al óleo",
-      "categoria": "pintura",
-      "imagen": "images/obras/ejemplo-pintura.svg",
-      "descripcion": "Pintura al óleo sobre lienzo, técnica de capas.",
-      "anio": 2025
-    },
-    {
-      "titulo": "Serie experimental",
-      "categoria": "varios",
-      "imagen": "images/obras/ejemplo-varios.svg",
-      "descripcion": "Pieza mixta explorando materiales no convencionales.",
-      "anio": 2025
-    },
-    {
       "titulo": "barco",
       "categoria": "acuarelas",
       "imagen": "images/obras/bote.jpg",
