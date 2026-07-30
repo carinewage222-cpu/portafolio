@@ -127,8 +127,22 @@ function initNav() {
   });
 }
 
+async function cargarConfig() {
+  try {
+    const res = await fetch('data/config.json');
+    if (!res.ok) throw new Error('No se pudo cargar config.json');
+    const config = await res.json();
+    const heroImage = document.getElementById('heroImage');
+    if (config.heroImagen) heroImage.src = config.heroImagen;
+    if (config.heroAlt) heroImage.alt = config.heroAlt;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   cargarObras();
+  cargarConfig();
   actualizarEstadoGaleria();
   initPigmentPills();
   initLightbox();

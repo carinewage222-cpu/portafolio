@@ -82,9 +82,11 @@ El sitio incluye [Decap CMS](https://decapcms.org) (antes "Netlify CMS"): un pan
 3. Bajá a **Services → Git Gateway** y hacé clic en **Enable Git Gateway**. Esto es lo que le da permiso al panel para escribir commits en tu repositorio de GitHub.
 4. Volvé arriba a la pestaña **Identity** y usá **Invite users** para invitarte a vos mismo con tu email. Te va a llegar un correo con un link.
 5. Abrí ese link (te va a llevar a `tusitio.netlify.app` y abrir un modal), elegí una contraseña. Quedás logueado.
-6. A partir de ahí, entrá cuando quieras a `tusitio.netlify.app/admin`, iniciá sesión, y vas a ver el formulario de "Obras" para agregar, editar o borrar piezas con imagen incluida.
+6. A partir de ahí, entrá cuando quieras a `tusitio.netlify.app/admin`, iniciá sesión, y vas a ver dos secciones:
+   - **Obras**: para agregar, editar o borrar piezas de la galería, con imagen incluida.
+   - **Configuración del sitio → Portada (inicio)**: para cambiar la imagen grande que aparece en el inicio, sin tocar código.
 
-Los archivos que lo configuran son `admin/index.html` (carga el panel) y `admin/config.yml` (define los campos: título, categoría, imagen, descripción, año — los mismos que en `data/obras.json`). Si en el futuro agregás una categoría nueva, sumala también a la lista `options` de `categoria` en `admin/config.yml`.
+Los archivos que lo configuran son `admin/index.html` (carga el panel) y `admin/config.yml` (define los campos de cada sección). Si en el futuro agregás una categoría nueva, sumala también a la lista `options` de `categoria` en `admin/config.yml`.
 
 ## Estructura del proyecto
 
@@ -93,6 +95,7 @@ Los archivos que lo configuran son `admin/index.html` (carga el panel) y `admin/
 ├── css/style.css        # Estilos y diseño responsivo
 ├── js/gallery.js         # Carga dinámica de obras, filtros y lightbox
 ├── data/obras.json       # Lista de obras — acá se agregan las nuevas
+├── data/config.json      # Imagen y texto alternativo de la portada
 ├── images/obras/         # Archivos de imagen de las obras
 └── admin/
     ├── index.html         # Carga el panel de Decap CMS
