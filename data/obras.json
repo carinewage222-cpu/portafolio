@@ -17,6 +17,54 @@
       "titulo": "conejo",
       "categoria": "dibujo-digital",
       "anio": 2026
+    },
+    {
+      "titulo": "sillon",
+      "categoria": "acuarelas",
+      "imagen": "images/obras/25 sin título_20260606165317.jpg",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20260714_171629.jpg",
+      "titulo": "pajaros de cordoba",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20260609_192534.jpg",
+      "titulo": "pajaro negro de Holbox",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20260419_165422.jpg",
+      "titulo": "pajaros negros de Holbox 2",
+      "anio": 2026,
+      "categoria": "acuarelas"
+    },
+    {
+      "imagen": "images/obras/20251211_201958.jpg",
+      "titulo": "girasoles",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20250526_182459.jpg",
+      "titulo": "rio de La Cruz",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20241122_110144.jpg",
+      "titulo": "niña con siames",
+      "categoria": "acuarelas",
+      "anio": 2026
+    },
+    {
+      "imagen": "images/obras/20240827_150720.jpg",
+      "titulo": "mar de Holbox",
+      "categoria": "acuarelas",
+      "anio": 2026
     }
   ]
 }
